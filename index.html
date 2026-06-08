@@ -1,0 +1,990 @@
+<!DOCTYPE html> <!-- Menentukan bahwa dokumen ini menggunakan HTML5 -->
+<html lang="id"> <!-- Membuka dokumen HTML dan menggunakan bahasa Indonesia -->
+
+<head> <!-- Bagian head berisi pengaturan halaman -->
+  <meta charset="UTF-8"> <!-- Mengatur karakter agar teks Indonesia terbaca dengan benar -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Membuat tampilan responsif di HP dan desktop -->
+  <title>Jasa Pembuatan Landing Page Profesional</title> <!-- Judul halaman yang muncul di tab browser -->
+
+  <style> /* Membuka bagian CSS untuk mengatur tampilan halaman */
+
+    * { /* Mengatur semua elemen */
+      margin: 0; /* Menghapus jarak luar bawaan browser */
+      padding: 0; /* Menghapus jarak dalam bawaan browser */
+      box-sizing: border-box; /* Membuat ukuran elemen lebih mudah dikontrol */
+      font-family: Arial, sans-serif; /* Mengatur jenis huruf utama */
+    }
+
+    html { /* Mengatur elemen HTML */
+      scroll-behavior: smooth; /* Membuat scroll ke section menjadi halus */
+    }
+
+    body { /* Mengatur seluruh badan halaman */
+      background: #ffffff; /* Warna latar utama putih */
+      color: #1f2937; /* Warna teks utama abu gelap */
+      line-height: 1.6; /* Mengatur tinggi baris agar nyaman dibaca */
+    }
+
+    a { /* Mengatur semua link */
+      text-decoration: none; /* Menghilangkan garis bawah link */
+      color: inherit; /* Warna link mengikuti warna teks induknya */
+    }
+
+    .container { /* Membuat pembungkus konten */
+      width: 90%; /* Lebar konten 90% dari layar */
+      max-width: 1200px; /* Batas maksimal lebar konten */
+      margin: auto; /* Membuat konten berada di tengah */
+    }
+
+    header { /* Mengatur bagian header */
+      background: #ffffff; /* Warna header putih */
+      border-bottom: 1px solid #e5e7eb; /* Garis tipis bawah header */
+      position: sticky; /* Header tetap terlihat saat halaman discroll */
+      top: 0; /* Posisi header menempel di atas */
+      z-index: 1000; /* Memastikan header berada di atas elemen lain */
+    }
+
+    .navbar { /* Mengatur navigasi */
+      display: flex; /* Membuat elemen sejajar horizontal */
+      justify-content: space-between; /* Logo di kiri, menu di kanan */
+      align-items: center; /* Menyelaraskan elemen secara vertikal */
+      padding: 18px 0; /* Memberi jarak atas dan bawah */
+    }
+
+    .logo { /* Mengatur logo teks */
+      font-size: 22px; /* Ukuran teks logo */
+      font-weight: bold; /* Membuat logo tebal */
+      color: #0f766e; /* Warna logo hijau profesional */
+    }
+
+    .logo span { /* Mengatur bagian tambahan pada logo */
+      color: #111827; /* Warna teks span menjadi gelap */
+    }
+
+    .nav-menu { /* Mengatur daftar menu */
+      display: flex; /* Membuat menu sejajar */
+      gap: 24px; /* Memberi jarak antar menu */
+      list-style: none; /* Menghilangkan bullet list */
+    }
+
+    .nav-menu a { /* Mengatur teks menu */
+      font-size: 15px; /* Ukuran teks menu */
+      color: #374151; /* Warna teks menu */
+      font-weight: 500; /* Ketebalan sedang */
+    }
+
+    .nav-menu a:hover { /* Efek saat menu disentuh kursor */
+      color: #0f766e; /* Warna berubah menjadi hijau */
+    }
+
+    .btn { /* Mengatur tombol umum */
+      display: inline-block; /* Membuat tombol bisa diberi padding */
+      padding: 12px 22px; /* Jarak dalam tombol */
+      border-radius: 8px; /* Membuat sudut tombol melengkung */
+      font-weight: bold; /* Teks tombol dibuat tebal */
+      transition: 0.3s; /* Efek transisi halus */
+      cursor: pointer; /* Kursor berubah menjadi tangan */
+    }
+
+    .btn-primary { /* Mengatur tombol utama */
+      background: #0f766e; /* Warna tombol hijau */
+      color: #ffffff; /* Warna teks tombol putih */
+      border: 2px solid #0f766e; /* Border hijau */
+    }
+
+    .btn-primary:hover { /* Efek hover tombol utama */
+      background: #115e59; /* Warna tombol menjadi lebih gelap */
+      border-color: #115e59; /* Border ikut lebih gelap */
+    }
+
+    .btn-outline { /* Mengatur tombol outline */
+      background: transparent; /* Latar tombol transparan */
+      color: #0f766e; /* Warna teks hijau */
+      border: 2px solid #0f766e; /* Border hijau */
+    }
+
+    .btn-outline:hover { /* Efek hover tombol outline */
+      background: #0f766e; /* Latar menjadi hijau */
+      color: #ffffff; /* Teks menjadi putih */
+    }
+
+    .hero { /* Mengatur section hero */
+      padding: 90px 0; /* Jarak atas bawah hero */
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); /* Gradasi putih ke abu sangat muda */
+    }
+
+    .hero-content { /* Mengatur isi hero */
+      display: grid; /* Menggunakan grid layout */
+      grid-template-columns: 1.1fr 0.9fr; /* Kolom kiri lebih besar dari kanan */
+      align-items: center; /* Menyelaraskan item di tengah */
+      gap: 50px; /* Jarak antar kolom */
+    }
+
+    .badge { /* Mengatur label kecil di hero */
+      display: inline-block; /* Agar badge bisa diberi padding */
+      background: #ecfdf5; /* Latar hijau sangat muda */
+      color: #047857; /* Warna teks hijau */
+      padding: 8px 14px; /* Jarak dalam badge */
+      border-radius: 999px; /* Membuat bentuk badge oval */
+      font-size: 14px; /* Ukuran teks badge */
+      font-weight: bold; /* Teks badge tebal */
+      margin-bottom: 18px; /* Jarak bawah badge */
+    }
+
+    .hero h1 { /* Mengatur judul utama */
+      font-size: 46px; /* Ukuran judul besar */
+      line-height: 1.2; /* Tinggi baris judul */
+      color: #111827; /* Warna judul gelap */
+      margin-bottom: 20px; /* Jarak bawah judul */
+    }
+
+    .hero h1 span { /* Mengatur kata penting pada judul */
+      color: #0f766e; /* Warna hijau untuk penekanan */
+    }
+
+    .hero p { /* Mengatur paragraf hero */
+      font-size: 18px; /* Ukuran teks paragraf */
+      color: #4b5563; /* Warna abu sedang */
+      margin-bottom: 28px; /* Jarak bawah paragraf */
+    }
+
+    .hero-buttons { /* Mengatur area tombol hero */
+      display: flex; /* Membuat tombol sejajar */
+      gap: 14px; /* Jarak antar tombol */
+      flex-wrap: wrap; /* Tombol turun baris jika layar kecil */
+    }
+
+    .hero-card { /* Mengatur kartu di sisi kanan hero */
+      background: #ffffff; /* Warna kartu putih */
+      border: 1px solid #e5e7eb; /* Border abu muda */
+      border-radius: 20px; /* Sudut kartu melengkung */
+      padding: 28px; /* Jarak dalam kartu */
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08); /* Bayangan lembut */
+    }
+
+    .hero-card h3 { /* Judul dalam kartu hero */
+      font-size: 22px; /* Ukuran judul kartu */
+      margin-bottom: 15px; /* Jarak bawah judul */
+      color: #111827; /* Warna teks gelap */
+    }
+
+    .check-list { /* Mengatur daftar checklist */
+      list-style: none; /* Menghilangkan bullet bawaan */
+    }
+
+    .check-list li { /* Mengatur setiap item checklist */
+      margin-bottom: 12px; /* Jarak antar item */
+      color: #374151; /* Warna teks */
+    }
+
+    .check-list li::before { /* Menambahkan ikon centang sebelum item */
+      content: "✓"; /* Isi ikon centang */
+      color: #0f766e; /* Warna ikon hijau */
+      font-weight: bold; /* Ikon dibuat tebal */
+      margin-right: 8px; /* Jarak ikon dengan teks */
+    }
+
+    section { /* Mengatur semua section */
+      padding: 80px 0; /* Jarak atas bawah setiap section */
+    }
+
+    .section-title { /* Mengatur judul section */
+      text-align: center; /* Membuat judul rata tengah */
+      margin-bottom: 50px; /* Jarak bawah judul */
+    }
+
+    .section-title h2 { /* Mengatur heading section */
+      font-size: 34px; /* Ukuran heading */
+      color: #111827; /* Warna heading gelap */
+      margin-bottom: 12px; /* Jarak bawah heading */
+    }
+
+    .section-title p { /* Mengatur deskripsi section */
+      color: #6b7280; /* Warna teks abu */
+      font-size: 16px; /* Ukuran teks */
+      max-width: 650px; /* Membatasi lebar teks */
+      margin: auto; /* Membuat teks berada di tengah */
+    }
+
+    .features-grid { /* Mengatur grid fitur */
+      display: grid; /* Menggunakan grid */
+      grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+      gap: 24px; /* Jarak antar kartu */
+    }
+
+    .feature-card { /* Mengatur kartu fitur */
+      background: #ffffff; /* Warna kartu putih */
+      border: 1px solid #e5e7eb; /* Border abu muda */
+      border-radius: 16px; /* Sudut kartu melengkung */
+      padding: 28px; /* Jarak dalam kartu */
+      transition: 0.3s; /* Efek transisi */
+    }
+
+    .feature-card:hover { /* Efek hover kartu fitur */
+      transform: translateY(-6px); /* Kartu naik sedikit */
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08); /* Bayangan muncul */
+    }
+
+    .icon { /* Mengatur ikon fitur */
+      width: 52px; /* Lebar ikon */
+      height: 52px; /* Tinggi ikon */
+      background: #ecfdf5; /* Latar ikon hijau muda */
+      color: #0f766e; /* Warna ikon hijau */
+      display: flex; /* Mengatur isi ikon */
+      align-items: center; /* Tengah vertikal */
+      justify-content: center; /* Tengah horizontal */
+      border-radius: 12px; /* Sudut ikon melengkung */
+      font-size: 24px; /* Ukuran ikon */
+      margin-bottom: 18px; /* Jarak bawah ikon */
+    }
+
+    .feature-card h3 { /* Judul kartu fitur */
+      font-size: 20px; /* Ukuran judul */
+      margin-bottom: 10px; /* Jarak bawah judul */
+      color: #111827; /* Warna teks gelap */
+    }
+
+    .feature-card p { /* Paragraf kartu fitur */
+      color: #6b7280; /* Warna teks abu */
+      font-size: 15px; /* Ukuran paragraf */
+    }
+
+    .pricing { /* Mengatur section harga */
+      background: #f8fafc; /* Latar abu sangat muda */
+    }
+
+    .pricing-grid { /* Mengatur grid paket harga */
+      display: grid; /* Menggunakan grid */
+      grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+      gap: 24px; /* Jarak antar paket */
+    }
+
+    .price-card { /* Mengatur kartu harga */
+      background: #ffffff; /* Warna kartu putih */
+      border: 1px solid #e5e7eb; /* Border abu muda */
+      border-radius: 18px; /* Sudut kartu melengkung */
+      padding: 32px; /* Jarak dalam kartu */
+      position: relative; /* Dibutuhkan untuk label populer */
+    }
+
+    .price-card.popular { /* Mengatur kartu paket populer */
+      border: 2px solid #0f766e; /* Border hijau lebih tebal */
+      box-shadow: 0 20px 45px rgba(15,118,110,0.12); /* Bayangan hijau lembut */
+    }
+
+    .popular-label { /* Mengatur label populer */
+      position: absolute; /* Posisi label bebas dalam kartu */
+      top: -14px; /* Label naik ke atas kartu */
+      left: 50%; /* Posisi label ke tengah */
+      transform: translateX(-50%); /* Menyempurnakan posisi tengah */
+      background: #0f766e; /* Latar hijau */
+      color: #ffffff; /* Teks putih */
+      padding: 6px 14px; /* Jarak dalam label */
+      border-radius: 999px; /* Label oval */
+      font-size: 13px; /* Ukuran teks label */
+      font-weight: bold; /* Teks label tebal */
+    }
+
+    .price-card h3 { /* Judul paket */
+      font-size: 22px; /* Ukuran judul */
+      margin-bottom: 10px; /* Jarak bawah judul */
+      color: #111827; /* Warna teks gelap */
+    }
+
+    .price { /* Mengatur harga */
+      font-size: 34px; /* Ukuran harga besar */
+      font-weight: bold; /* Harga tebal */
+      color: #0f766e; /* Warna harga hijau */
+      margin-bottom: 18px; /* Jarak bawah harga */
+    }
+
+    .price span { /* Mengatur teks kecil pada harga */
+      font-size: 14px; /* Ukuran teks kecil */
+      color: #6b7280; /* Warna abu */
+      font-weight: normal; /* Ketebalan normal */
+    }
+
+    .price-card ul { /* Mengatur daftar fitur paket */
+      list-style: none; /* Menghilangkan bullet */
+      margin-bottom: 24px; /* Jarak bawah daftar */
+    }
+
+    .price-card li { /* Mengatur item fitur paket */
+      margin-bottom: 10px; /* Jarak antar item */
+      color: #374151; /* Warna teks */
+      font-size: 15px; /* Ukuran teks */
+    }
+
+    .price-card li::before { /* Menambahkan centang di fitur paket */
+      content: "✓"; /* Ikon centang */
+      color: #0f766e; /* Warna hijau */
+      font-weight: bold; /* Ikon tebal */
+      margin-right: 8px; /* Jarak ikon */
+    }
+
+    .portfolio-grid { /* Mengatur grid portofolio */
+      display: grid; /* Menggunakan grid */
+      grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+      gap: 24px; /* Jarak antar kartu */
+    }
+
+    .portfolio-card { /* Mengatur kartu portofolio */
+      border: 1px solid #e5e7eb; /* Border abu muda */
+      border-radius: 16px; /* Sudut melengkung */
+      overflow: hidden; /* Memotong isi yang keluar */
+      background: #ffffff; /* Warna kartu putih */
+    }
+
+    .portfolio-image { /* Mengatur area gambar portofolio */
+      height: 180px; /* Tinggi area gambar */
+      background: linear-gradient(135deg, #ccfbf1, #f8fafc); /* Latar contoh gambar */
+      display: flex; /* Mengatur isi di tengah */
+      align-items: center; /* Tengah vertikal */
+      justify-content: center; /* Tengah horizontal */
+      color: #0f766e; /* Warna teks */
+      font-weight: bold; /* Teks tebal */
+      font-size: 20px; /* Ukuran teks */
+    }
+
+    .portfolio-content { /* Mengatur isi kartu portofolio */
+      padding: 22px; /* Jarak dalam isi */
+    }
+
+    .portfolio-content h3 { /* Judul portofolio */
+      margin-bottom: 8px; /* Jarak bawah judul */
+      color: #111827; /* Warna gelap */
+    }
+
+    .portfolio-content p { /* Deskripsi portofolio */
+      color: #6b7280; /* Warna abu */
+      font-size: 15px; /* Ukuran teks */
+    }
+
+    .process { /* Mengatur section proses */
+      background: #f8fafc; /* Latar abu sangat muda */
+    }
+
+    .process-grid { /* Mengatur grid proses */
+      display: grid; /* Menggunakan grid */
+      grid-template-columns: repeat(4, 1fr); /* Membuat 4 kolom */
+      gap: 20px; /* Jarak antar proses */
+    }
+
+    .process-card { /* Mengatur kartu proses */
+      background: #ffffff; /* Latar putih */
+      border: 1px solid #e5e7eb; /* Border abu muda */
+      border-radius: 16px; /* Sudut melengkung */
+      padding: 24px; /* Jarak dalam kartu */
+      text-align: center; /* Teks rata tengah */
+    }
+
+    .number { /* Mengatur nomor proses */
+      width: 44px; /* Lebar nomor */
+      height: 44px; /* Tinggi nomor */
+      background: #0f766e; /* Latar hijau */
+      color: #ffffff; /* Teks putih */
+      display: flex; /* Mengatur nomor di tengah */
+      align-items: center; /* Tengah vertikal */
+      justify-content: center; /* Tengah horizontal */
+      border-radius: 50%; /* Membuat lingkaran */
+      margin: 0 auto 16px; /* Tengah dan jarak bawah */
+      font-weight: bold; /* Nomor tebal */
+    }
+
+    .testimonial-grid { /* Mengatur grid testimoni */
+      display: grid; /* Menggunakan grid */
+      grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom */
+      gap: 24px; /* Jarak antar testimoni */
+    }
+
+    .testimonial-card { /* Mengatur kartu testimoni */
+      background: #ffffff; /* Latar putih */
+      border: 1px solid #e5e7eb; /* Border abu muda */
+      border-radius: 16px; /* Sudut melengkung */
+      padding: 26px; /* Jarak dalam kartu */
+    }
+
+    .testimonial-card p { /* Mengatur isi testimoni */
+      color: #4b5563; /* Warna abu */
+      margin-bottom: 18px; /* Jarak bawah */
+      font-style: italic; /* Membuat testimoni miring */
+    }
+
+    .client { /* Mengatur nama klien */
+      font-weight: bold; /* Teks tebal */
+      color: #111827; /* Warna gelap */
+    }
+
+    .faq { /* Mengatur section FAQ */
+      background: #f8fafc; /* Latar abu muda */
+    }
+
+    .faq-item { /* Mengatur setiap item FAQ */
+      background: #ffffff; /* Latar putih */
+      border: 1px solid #e5e7eb; /* Border abu muda */
+      border-radius: 12px; /* Sudut melengkung */
+      margin-bottom: 14px; /* Jarak antar FAQ */
+      overflow: hidden; /* Menyembunyikan isi yang keluar */
+    }
+
+    .faq-question { /* Mengatur pertanyaan FAQ */
+      padding: 18px 22px; /* Jarak dalam pertanyaan */
+      display: flex; /* Membuat teks dan ikon sejajar */
+      justify-content: space-between; /* Teks kiri, ikon kanan */
+      cursor: pointer; /* Kursor tangan */
+      font-weight: bold; /* Teks tebal */
+      color: #111827; /* Warna gelap */
+    }
+
+    .faq-answer { /* Mengatur jawaban FAQ */
+      display: none; /* Jawaban disembunyikan awalnya */
+      padding: 0 22px 18px; /* Jarak dalam jawaban */
+      color: #6b7280; /* Warna abu */
+      font-size: 15px; /* Ukuran teks */
+    }
+
+    .faq-item.active .faq-answer { /* Mengatur jawaban saat FAQ aktif */
+      display: block; /* Menampilkan jawaban */
+    }
+
+    .contact-content { /* Mengatur area kontak */
+      display: grid; /* Menggunakan grid */
+      grid-template-columns: 1fr 1fr; /* Membuat dua kolom */
+      gap: 40px; /* Jarak antar kolom */
+      align-items: start; /* Menyelaraskan ke atas */
+    }
+
+    .contact-info h2 { /* Judul kontak */
+      font-size: 34px; /* Ukuran judul */
+      margin-bottom: 14px; /* Jarak bawah */
+      color: #111827; /* Warna gelap */
+    }
+
+    .contact-info p { /* Paragraf kontak */
+      color: #6b7280; /* Warna abu */
+      margin-bottom: 22px; /* Jarak bawah */
+    }
+
+    .contact-box { /* Kotak informasi kontak */
+      background: #f8fafc; /* Latar abu muda */
+      padding: 20px; /* Jarak dalam */
+      border-radius: 14px; /* Sudut melengkung */
+      margin-bottom: 14px; /* Jarak bawah */
+      border: 1px solid #e5e7eb; /* Border abu */
+    }
+
+    form { /* Mengatur form */
+      background: #ffffff; /* Latar putih */
+      border: 1px solid #e5e7eb; /* Border abu muda */
+      border-radius: 18px; /* Sudut melengkung */
+      padding: 30px; /* Jarak dalam form */
+      box-shadow: 0 15px 35px rgba(0,0,0,0.06); /* Bayangan lembut */
+    }
+
+    .form-group { /* Mengatur grup input */
+      margin-bottom: 16px; /* Jarak antar input */
+    }
+
+    label { /* Mengatur label input */
+      display: block; /* Label berada di atas input */
+      margin-bottom: 8px; /* Jarak label ke input */
+      font-weight: bold; /* Label tebal */
+      color: #374151; /* Warna label */
+    }
+
+    input, select, textarea { /* Mengatur semua input */
+      width: 100%; /* Lebar input penuh */
+      padding: 13px; /* Jarak dalam input */
+      border: 1px solid #d1d5db; /* Border abu */
+      border-radius: 8px; /* Sudut input melengkung */
+      font-size: 15px; /* Ukuran teks input */
+      outline: none; /* Menghilangkan outline bawaan */
+    }
+
+    input:focus, select:focus, textarea:focus { /* Efek saat input dipilih */
+      border-color: #0f766e; /* Border menjadi hijau */
+    }
+
+    textarea { /* Mengatur textarea */
+      min-height: 120px; /* Tinggi minimal textarea */
+      resize: vertical; /* Hanya bisa diubah tinggi */
+    }
+
+    .submit-btn { /* Mengatur tombol submit */
+      width: 100%; /* Tombol selebar form */
+      border: none; /* Menghilangkan border bawaan */
+      font-size: 16px; /* Ukuran teks tombol */
+    }
+
+    footer { /* Mengatur footer */
+      background: #111827; /* Latar footer gelap */
+      color: #ffffff; /* Warna teks putih */
+      padding: 35px 0; /* Jarak atas bawah footer */
+      text-align: center; /* Teks rata tengah */
+    }
+
+    footer p { /* Mengatur paragraf footer */
+      color: #d1d5db; /* Warna abu terang */
+      font-size: 14px; /* Ukuran teks */
+    }
+
+    .whatsapp-float { /* Mengatur tombol WhatsApp melayang */
+      position: fixed; /* Posisi tetap di layar */
+      right: 22px; /* Jarak dari kanan */
+      bottom: 22px; /* Jarak dari bawah */
+      background: #22c55e; /* Warna hijau WhatsApp */
+      color: #ffffff; /* Warna teks putih */
+      padding: 14px 18px; /* Jarak dalam tombol */
+      border-radius: 999px; /* Bentuk oval */
+      font-weight: bold; /* Teks tebal */
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Bayangan tombol */
+      z-index: 1000; /* Tombol berada di atas elemen lain */
+    }
+
+    .mobile-toggle { /* Mengatur tombol menu mobile */
+      display: none; /* Disembunyikan di desktop */
+      font-size: 28px; /* Ukuran ikon menu */
+      cursor: pointer; /* Kursor tangan */
+    }
+
+    @media (max-width: 900px) { /* Pengaturan untuk layar tablet dan HP */
+
+      .hero-content, /* Hero menjadi satu kolom */
+      .contact-content { /* Kontak menjadi satu kolom */
+        grid-template-columns: 1fr; /* Satu kolom */
+      }
+
+      .features-grid, /* Fitur menjadi dua kolom */
+      .pricing-grid, /* Harga menjadi dua kolom */
+      .portfolio-grid, /* Portofolio menjadi dua kolom */
+      .testimonial-grid { /* Testimoni menjadi dua kolom */
+        grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+      }
+
+      .process-grid { /* Proses menjadi dua kolom */
+        grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+      }
+
+      .hero h1 { /* Ukuran judul hero di tablet */
+        font-size: 36px; /* Judul lebih kecil */
+      }
+    }
+
+    @media (max-width: 600px) { /* Pengaturan untuk layar HP kecil */
+
+      .mobile-toggle { /* Menampilkan tombol menu mobile */
+        display: block; /* Tombol menu tampil */
+      }
+
+      .nav-menu { /* Mengatur menu mobile */
+        display: none; /* Menu disembunyikan awalnya */
+        position: absolute; /* Posisi menu bebas */
+        top: 70px; /* Posisi menu di bawah header */
+        left: 0; /* Menempel kiri */
+        width: 100%; /* Lebar menu penuh */
+        background: #ffffff; /* Latar putih */
+        flex-direction: column; /* Menu tersusun vertikal */
+        padding: 20px; /* Jarak dalam menu */
+        border-bottom: 1px solid #e5e7eb; /* Garis bawah */
+      }
+
+      .nav-menu.active { /* Mengatur menu saat aktif */
+        display: flex; /* Menu ditampilkan */
+      }
+
+      .features-grid, /* Fitur satu kolom */
+      .pricing-grid, /* Harga satu kolom */
+      .portfolio-grid, /* Portofolio satu kolom */
+      .testimonial-grid, /* Testimoni satu kolom */
+      .process-grid { /* Proses satu kolom */
+        grid-template-columns: 1fr; /* Satu kolom */
+      }
+
+      .hero { /* Mengatur hero di HP */
+        padding: 60px 0; /* Jarak hero lebih kecil */
+      }
+
+      .hero h1 { /* Judul hero di HP */
+        font-size: 32px; /* Ukuran judul lebih kecil */
+      }
+
+      .hero p { /* Paragraf hero di HP */
+        font-size: 16px; /* Ukuran paragraf lebih kecil */
+      }
+
+      section { /* Section di HP */
+        padding: 60px 0; /* Jarak section lebih kecil */
+      }
+    }
+
+  </style> <!-- Menutup bagian CSS -->
+</head> <!-- Menutup head -->
+
+<body> <!-- Membuka isi halaman -->
+
+  <header> <!-- Membuka header -->
+    <div class="container navbar"> <!-- Container navbar -->
+      <div class="logo">BUMI<span>Digital.online</span></div> <!-- Logo brand landing page -->
+      <div class="mobile-toggle" onclick="toggleMenu()">☰</div> <!-- Tombol menu untuk HP -->
+      <ul class="nav-menu" id="navMenu"> <!-- Daftar menu navigasi -->
+        <li><a href="#home">Home</a></li> <!-- Menu menuju hero -->
+        <li><a href="#fitur">Fitur</a></li> <!-- Menu menuju fitur -->
+        <li><a href="#harga">Harga</a></li> <!-- Menu menuju harga -->
+        <li><a href="#portfolio">Portfolio</a></li> <!-- Menu menuju portfolio -->
+        <li><a href="#faq">FAQ</a></li> <!-- Menu menuju FAQ -->
+        <li><a href="#kontak">Kontak</a></li> <!-- Menu menuju kontak -->
+      </ul> <!-- Menutup daftar menu -->
+    </div> <!-- Menutup container navbar -->
+  </header> <!-- Menutup header -->
+
+  <section class="hero" id="home"> <!-- Membuka section hero -->
+    <div class="container hero-content"> <!-- Container isi hero -->
+      <div> <!-- Kolom kiri hero -->
+        <div class="badge">Landing Page Profesional untuk Bisnis Anda</div> <!-- Badge promosi -->
+        <h1>Buat Landing Page yang <span>Responsive, Cepat, dan Terpercaya</span></h1> <!-- Judul utama -->
+        <p>Kami membantu bisnis Anda memiliki landing page profesional, ringan, responsif, dan siap digunakan untuk promosi produk, jasa, campaign, 
+		maupun iklan digital anda.</p> <!-- Deskripsi hero -->
+        <div class="hero-buttons"> <!-- Area tombol hero -->
+          <a href="#kontak" class="btn btn-primary">Konsultasi Gratis</a> <!-- Tombol menuju kontak -->
+          <a href="#harga" class="btn btn-outline">Lihat Paket</a> <!-- Tombol menuju harga -->
+        </div> <!-- Menutup tombol hero -->
+      </div> <!-- Menutup kolom kiri hero -->
+
+      <div class="hero-card"> <!-- Kolom kanan berupa kartu -->
+        <h3>Yang Anda Dapatkan</h3> <!-- Judul kartu -->
+        <ul class="check-list"> <!-- Daftar checklist -->
+          <li>Desain profesional dan modern</li> <!-- Fitur 1 -->
+          <li>Responsive untuk HP, tablet, dan laptop</li> <!-- Fitur 2 -->
+          <li>Copywriting Penjualan</li> <!-- Fitur 3 -->
+          <li>Tombol WhatsApp langsung order</li> <!-- Fitur 4 -->
+          <li>Optimasi kecepatan dan struktur halaman</li> <!-- Fitur 5 -->
+          <li>Bisa digunakan untuk iklan Meta Ads atau Google Ads</li> <!-- Fitur 6 -->
+        </ul> <!-- Menutup checklist -->
+      </div> <!-- Menutup kartu hero -->
+    </div> <!-- Menutup container hero -->
+  </section> <!-- Menutup section hero -->
+
+  <section id="fitur"> <!-- Membuka section fitur -->
+    <div class="container"> <!-- Container fitur -->
+      <div class="section-title"> <!-- Judul section -->
+        <h2>Kenapa Memilih Kami?</h2> <!-- Heading fitur -->
+        <p>Landing page bukan hanya soal tampilan, tetapi juga soal kepercayaan, kejelasan informasi, dan kemudahan calon pelanggan untuk menghubungi Anda.</p> <!-- Deskripsi fitur -->
+      </div> <!-- Menutup judul section -->
+
+      <div class="features-grid"> <!-- Grid fitur -->
+        <div class="feature-card"> <!-- Kartu fitur 1 -->
+          <div class="icon">⚡</div> <!-- Ikon fitur -->
+          <h3>Loading Cepat</h3> <!-- Judul fitur -->
+          <p>Struktur halaman dibuat ringan agar calon pelanggan tidak menunggu lama saat membuka website.</p> <!-- Deskripsi fitur -->
+        </div> <!-- Menutup kartu fitur 1 -->
+
+        <div class="feature-card"> <!-- Kartu fitur 2 -->
+          <div class="icon">📱</div> <!-- Ikon fitur -->
+          <h3>Mobile Friendly</h3> <!-- Judul fitur -->
+          <p>Tampilan menyesuaikan layar HP sehingga nyaman dibaca oleh mayoritas pengguna internet.</p> <!-- Deskripsi fitur -->
+        </div> <!-- Menutup kartu fitur 2 -->
+
+        <div class="feature-card"> <!-- Kartu fitur 3 -->
+          <div class="icon">💬</div> <!-- Ikon fitur -->
+          <h3>Terhubung WhatsApp</h3> <!-- Judul fitur -->
+          <p>Tombol CTA dapat diarahkan langsung ke WhatsApp agar calon pelanggan mudah melakukan pemesanan.</p> <!-- Deskripsi fitur -->
+        </div> <!-- Menutup kartu fitur 3 -->
+
+        <div class="feature-card"> <!-- Kartu fitur 4 -->
+          <div class="icon">🎯</div> <!-- Ikon fitur -->
+          <h3>Siap untuk Iklan</h3> <!-- Judul fitur -->
+          <p>Susunan halaman dibuat jelas agar cocok digunakan sebagai halaman tujuan iklan digital.</p> <!-- Deskripsi fitur -->
+        </div> <!-- Menutup kartu fitur 4 -->
+
+        <div class="feature-card"> <!-- Kartu fitur 5 -->
+          <div class="icon">🔒</div> <!-- Ikon fitur -->
+          <h3>Tampilan Modern</h3> <!-- Judul fitur -->
+          <p>Dilengkapi bagian trust, testimoni, paket, FAQ, dan alur kerja agar bisnis terlihat lebih profesional.</p> <!-- Deskripsi fitur -->
+        </div> <!-- Menutup kartu fitur 5 -->
+
+        <div class="feature-card"> <!-- Kartu fitur 6 -->
+          <div class="icon">🛠️</div> <!-- Ikon fitur -->
+          <h3>Mudah di Custom</h3> <!-- Judul fitur -->
+          <p>Konten dapat disesuaikan dengan kebutuhan bisnis, mulai dari warna, teks, harga, hingga link kontak.</p> <!-- Deskripsi fitur -->
+        </div> <!-- Menutup kartu fitur 6 -->
+      </div> <!-- Menutup grid fitur -->
+    </div> <!-- Menutup container fitur -->
+  </section> <!-- Menutup section fitur -->
+
+  <section class="pricing" id="harga"> <!-- Membuka section harga -->
+    <div class="container"> <!-- Container harga -->
+      <div class="section-title"> <!-- Judul section harga -->
+        <h2>Paket Pembuatan Landing Page</h2> <!-- Heading harga -->
+        <p>Pilih paket sesuai kebutuhan bisnis Anda. Semua paket dapat disesuaikan kembali berdasarkan fitur tambahan.</p> <!-- Deskripsi harga -->
+      </div> <!-- Menutup judul harga -->
+
+      <div class="pricing-grid"> <!-- Grid paket harga -->
+        <div class="price-card"> <!-- Kartu paket basic -->
+          <h3>Basic</h3> <!-- Nama paket -->
+          <div class="price">Rp499K <span>/ halaman</span></div> <!-- Harga paket -->
+          <ul> <!-- Daftar fitur paket -->
+            <li>1 halaman landing page</li> <!-- Fitur paket -->
+            <li>Desain clean dan responsif</li> <!-- Fitur paket -->
+            <li>Tombol WhatsApp</li> <!-- Fitur paket -->
+            <li>3 section utama</li> <!-- Fitur paket -->
+			<li>free domain</li> <!-- Fitur paket -->
+            <li>Revisi 5 kali</li> <!-- Fitur paket -->
+          </ul> <!-- Menutup fitur paket -->
+          <a href="#kontak" class="btn btn-outline">Pilih Paket</a> <!-- Tombol pilih paket -->
+        </div> <!-- Menutup kartu basic -->
+
+        <div class="price-card popular"> <!-- Kartu paket profesional -->
+          <div class="popular-label">Paling Dipilih</div> <!-- Label paket populer -->
+          <h3>Professional</h3> <!-- Nama paket -->
+          <div class="price">Rp999K <span>/ halaman</span></div> <!-- Harga paket -->
+          <ul> <!-- Daftar fitur paket -->
+            <li>1 halaman landing page lengkap</li> <!-- Fitur paket -->
+            <li>Desain premium dan profesional</li> <!-- Fitur paket -->
+            <li>Copywriting dasar</li> <!-- Fitur paket -->
+            <li>Form konsultasi</li> <!-- Fitur paket -->
+            <li>FAQ dan testimoni</li> <!-- Fitur paket -->
+			<li>Gratis Jasa Monetisasi Landing Page</li> <!-- Fitur paket -->
+			<li>free domain .com .id</li> <!-- Fitur paket -->
+            <li>Revisi 10 kali</li> <!-- Fitur paket -->
+          </ul> <!-- Menutup fitur paket -->
+          <a href="#kontak" class="btn btn-primary">Pilih Paket</a> <!-- Tombol pilih paket -->
+        </div> <!-- Menutup kartu professional -->
+
+        <div class="price-card"> <!-- Kartu paket bisnis -->
+          <h3>Business</h3> <!-- Nama paket -->
+          <div class="price">Rp1,5JT <span>/ halaman</span></div> <!-- Harga paket -->
+          <ul> <!-- Daftar fitur paket -->
+            <li>Landing page custom</li> <!-- Fitur paket -->
+            <li>Copywriting lebih lengkap</li> <!-- Fitur paket -->
+            <li>Optimasi CTA</li> <!-- Fitur paket -->
+            <li>Integrasi Pixel dasar</li> <!-- Fitur paket -->
+            <li>Struktur siap iklan</li> <!-- Fitur paket -->
+			<li>Gratis Jasa Monetisasi Landing Page</li> <!-- Fitur paket -->
+			<li>Gratis Review lokasi usaha di Google Maps</li> <!-- Fitur paket -->
+			<li>free domain .com .id</li> <!-- Fitur paket -->
+            <li>Revisi 10 kali</li> <!-- Fitur paket -->
+          </ul> <!-- Menutup fitur paket -->
+          <a href="#kontak" class="btn btn-outline">Pilih Paket</a> <!-- Tombol pilih paket -->
+        </div> <!-- Menutup kartu bisnis -->
+      </div> <!-- Menutup grid harga -->
+    </div> <!-- Menutup container harga -->
+  </section> <!-- Menutup section harga -->
+
+  <section id="portfolio"> <!-- Membuka section portfolio -->
+    <div class="container"> <!-- Container portfolio -->
+      <div class="section-title"> <!-- Judul section portfolio -->
+        <h2>Contoh Jenis Landing Page</h2> <!-- Heading portfolio -->
+        <p>Kami dapat membuat berbagai jenis landing page sesuai kebutuhan produk, jasa, personal branding, maupun promosi event.</p> <!-- Deskripsi portfolio -->
+      </div> <!-- Menutup judul portfolio -->
+
+      <div class="portfolio-grid"> <!-- Grid portfolio -->
+        <div class="portfolio-card"> <!-- Kartu portfolio 1 -->
+          <div class="portfolio-image">Produk</div> <!-- Area gambar portfolio -->
+          <div class="portfolio-content"> <!-- Isi portfolio -->
+            <h3>Landing Page Produk</h3> <!-- Judul portfolio -->
+            <p>Cocok untuk jualan skincare, fashion, makanan, digital product, dan produk fisik lainnya.</p> <!-- Deskripsi portfolio -->
+          </div> <!-- Menutup isi portfolio -->
+        </div> <!-- Menutup kartu portfolio 1 -->
+
+        <div class="portfolio-card"> <!-- Kartu portfolio 2 -->
+          <div class="portfolio-image">Jasa</div> <!-- Area gambar portfolio -->
+          <div class="portfolio-content"> <!-- Isi portfolio -->
+            <h3>Landing Page Jasa</h3> <!-- Judul portfolio -->
+            <p>Cocok untuk jasa desain, konsultan, kursus, layanan profesional, dan bisnis lokal.</p> <!-- Deskripsi portfolio -->
+          </div> <!-- Menutup isi portfolio -->
+        </div> <!-- Menutup kartu portfolio 2 -->
+
+        <div class="portfolio-card"> <!-- Kartu portfolio 3 -->
+          <div class="portfolio-image">Event</div> <!-- Area gambar portfolio -->
+          <div class="portfolio-content"> <!-- Isi portfolio -->
+            <h3>Landing Page Event</h3> <!-- Judul portfolio -->
+            <p>Cocok untuk workshop, seminar, webinar, konser, pelatihan, dan pendaftaran acara.</p> <!-- Deskripsi portfolio -->
+          </div> <!-- Menutup isi portfolio -->
+        </div> <!-- Menutup kartu portfolio 3 -->
+      </div> <!-- Menutup grid portfolio -->
+    </div> <!-- Menutup container portfolio -->
+  </section> <!-- Menutup section portfolio -->
+
+  <section class="process"> <!-- Membuka section proses -->
+    <div class="container"> <!-- Container proses -->
+      <div class="section-title"> <!-- Judul section proses -->
+        <h2>Proses Pemesanan</h2> <!-- Heading proses -->
+        <p>Kami membuat proses kerja sederhana agar Anda mudah memahami tahapan dari awal sampai landing page siap digunakan.</p> <!-- Deskripsi proses -->
+      </div> <!-- Menutup judul proses -->
+
+      <div class="process-grid"> <!-- Grid proses -->
+        <div class="process-card"> <!-- Kartu proses 1 -->
+          <div class="number">1</div> <!-- Nomor proses -->
+          <h3>Konsultasi</h3> <!-- Judul proses -->
+          <p>Diskusi kebutuhan, tujuan landing page, jenis bisnis, dan target pelanggan.</p> <!-- Deskripsi proses -->
+        </div> <!-- Menutup proses 1 -->
+
+        <div class="process-card"> <!-- Kartu proses 2 -->
+          <div class="number">2</div> <!-- Nomor proses -->
+          <h3>Konsep</h3> <!-- Judul proses -->
+          <p>Menentukan struktur halaman, gaya desain, warna, konten, dan CTA utama.</p> <!-- Deskripsi proses -->
+        </div> <!-- Menutup proses 2 -->
+
+        <div class="process-card"> <!-- Kartu proses 3 -->
+          <div class="number">3</div> <!-- Nomor proses -->
+          <h3>Pengerjaan</h3> <!-- Judul proses -->
+          <p>Landing page dibuat sesuai kebutuhan dan disesuaikan dengan identitas bisnis Anda.</p> <!-- Deskripsi proses -->
+        </div> <!-- Menutup proses 3 -->
+
+        <div class="process-card"> <!-- Kartu proses 4 -->
+          <div class="number">4</div> <!-- Nomor proses -->
+          <h3>Publikasi</h3> <!-- Judul proses -->
+          <p>Landing page siap digunakan untuk promosi, iklan, dan menerima calon pelanggan.</p> <!-- Deskripsi proses -->
+        </div> <!-- Menutup proses 4 -->
+      </div> <!-- Menutup grid proses -->
+    </div> <!-- Menutup container proses -->
+  </section> <!-- Menutup section proses -->
+
+  <section> <!-- Membuka section testimoni -->
+    <div class="container"> <!-- Container testimoni -->
+      <div class="section-title"> <!-- Judul testimoni -->
+        <h2>Apa Kata Klien?</h2> <!-- Heading testimoni -->
+        <p>Kepercayaan calon pelanggan dapat meningkat ketika landing page terlihat rapi, jelas, dan profesional.</p> <!-- Deskripsi testimoni -->
+      </div> <!-- Menutup judul testimoni -->
+
+      <div class="testimonial-grid"> <!-- Grid testimoni -->
+        <div class="testimonial-card"> <!-- Kartu testimoni 1 -->
+          <p>"Desainnya bersih, informasinya jelas, dan pelanggan lebih mudah menghubungi lewat WhatsApp."</p> <!-- Isi testimoni -->
+          <div class="client">Rina - Owner Skincare</div> <!-- Nama klien -->
+        </div> <!-- Menutup testimoni 1 -->
+
+        <div class="testimonial-card"> <!-- Kartu testimoni 2 -->
+          <p>"Landing page terlihat profesional dan cocok untuk kebutuhan iklan produk saya."</p> <!-- Isi testimoni -->
+          <div class="client">Dimas - Digital Marketer</div> <!-- Nama klien -->
+        </div> <!-- Menutup testimoni 2 -->
+
+        <div class="testimonial-card"> <!-- Kartu testimoni 3 -->
+          <p>"Prosesnya mudah dipahami, hasilnya rapi, dan bisa langsung digunakan untuk promosi."</p> <!-- Isi testimoni -->
+          <div class="client">Ayu - Pemilik Kursus</div> <!-- Nama klien -->
+        </div> <!-- Menutup testimoni 3 -->
+      </div> <!-- Menutup grid testimoni -->
+    </div> <!-- Menutup container testimoni -->
+  </section> <!-- Menutup section testimoni -->
+
+  <section class="faq" id="faq"> <!-- Membuka section FAQ -->
+    <div class="container"> <!-- Container FAQ -->
+      <div class="section-title"> <!-- Judul FAQ -->
+        <h2>Pertanyaan yang Sering Ditanyakan</h2> <!-- Heading FAQ -->
+        <p>Berikut beberapa pertanyaan umum sebelum memesan jasa pembuatan landing page.</p> <!-- Deskripsi FAQ -->
+      </div> <!-- Menutup judul FAQ -->
+
+      <div class="faq-item"> <!-- FAQ item 1 -->
+        <div class="faq-question" onclick="toggleFaq(this)">Berapa lama pengerjaan landing page? <span>+</span></div> <!-- Pertanyaan FAQ -->
+        <div class="faq-answer">Estimasi pengerjaan biasanya 2–5 hari kerja, tergantung tingkat kesulitan desain dan kelengkapan materi dari klien.</div> <!-- Jawaban FAQ -->
+      </div> <!-- Menutup FAQ item 1 -->
+
+      <div class="faq-item"> <!-- FAQ item 2 -->
+        <div class="faq-question" onclick="toggleFaq(this)">Apakah bisa request warna dan desain? <span>+</span></div> <!-- Pertanyaan FAQ -->
+        <div class="faq-answer">Bisa. Warna, gaya desain, teks, gambar, dan struktur halaman dapat disesuaikan dengan branding bisnis Anda.</div> <!-- Jawaban FAQ -->
+      </div> <!-- Menutup FAQ item 2 -->
+
+      <div class="faq-item"> <!-- FAQ item 3 -->
+        <div class="faq-question" onclick="toggleFaq(this)">Apakah landing page bisa langsung dipakai untuk iklan? <span>+</span></div> <!-- Pertanyaan FAQ -->
+        <div class="faq-answer">Bisa. Landing page disusun dengan struktur yang jelas agar cocok digunakan sebagai halaman tujuan iklan digital.</div> <!-- Jawaban FAQ -->
+      </div> <!-- Menutup FAQ item 3 -->
+
+      <div class="faq-item"> <!-- FAQ item 4 -->
+        <div class="faq-question" onclick="toggleFaq(this)">Apakah saya perlu hosting dan domain? <span>+</span></div> <!-- Pertanyaan FAQ -->
+        <div class="faq-answer">Jika ingin landing page online dengan alamat website sendiri, Anda memerlukan domain dan hosting. 
+		Kami menyediakan hosting dan nama domain sesuai ketersediaan (nama domain sebuah website tidak boleh sama, sehingga jika sudah di pakai orang lain
+		kita harus melakukan penyesuaian sesuai ketersediaan nama domain penyedia layanan).</div> <!-- Jawaban FAQ -->
+      </div> <!-- Menutup FAQ item 4 -->
+    </div> <!-- Menutup container FAQ -->
+  </section> <!-- Menutup section FAQ -->
+
+  <section id="kontak"> <!-- Membuka section kontak -->
+    <div class="container contact-content"> <!-- Container kontak -->
+      <div class="contact-info"> <!-- Kolom informasi kontak -->
+        <h2>Siap Memiliki Landing Page Profesional?</h2> <!-- Judul kontak -->
+        <p>Konsultasikan kebutuhan landing page Anda sekarang. Ceritakan produk atau jasa Anda, lalu kami bantu susun halaman yang lebih jelas, rapi, dan meyakinkan.</p> <!-- Deskripsi kontak -->
+
+        <div class="contact-box"> <!-- Kotak kontak WhatsApp -->
+          <strong>WhatsApp:</strong> 085885959885 <!-- Nomor WhatsApp -->
+        </div> <!-- Menutup kotak kontak -->
+
+        <div class="contact-box"> <!-- Kotak kontak email -->
+          <strong>Email:</strong> amirkhusni26@gmail.com <!-- Alamat email -->
+        </div> <!-- Menutup kotak email -->
+
+        <div class="contact-box"> <!-- Kotak jam layanan -->
+          <strong>Jam Layanan:</strong> Senin - Sabtu, 09.00 - 18.00 WIB <!-- Jam layanan -->
+        </div> <!-- Menutup kotak jam layanan -->
+      </div> <!-- Menutup kolom informasi -->
+
+      <form onsubmit="sendToWhatsApp(event)"> <!-- Form konsultasi dengan fungsi kirim ke WhatsApp -->
+        <div class="form-group"> <!-- Grup nama -->
+          <label for="nama">Nama Lengkap</label> <!-- Label nama -->
+          <input type="text" id="nama" placeholder="Masukkan nama Anda" required> <!-- Input nama wajib diisi -->
+        </div> <!-- Menutup grup nama -->
+
+        <div class="form-group"> <!-- Grup bisnis -->
+          <label for="bisnis">Jenis Bisnis</label> <!-- Label bisnis -->
+          <input type="text" id="bisnis" placeholder="Contoh: Skincare, Catering, Kursus Online" required> <!-- Input jenis bisnis -->
+        </div> <!-- Menutup grup bisnis -->
+
+        <div class="form-group"> <!-- Grup paket -->
+          <label for="paket">Pilih Paket</label> <!-- Label paket -->
+          <select id="paket" required> <!-- Dropdown paket wajib dipilih -->
+            <option value="">-- Pilih Paket --</option> <!-- Pilihan kosong -->
+            <option value="Basic">Basic</option> <!-- Pilihan Basic -->
+            <option value="Professional">Professional</option> <!-- Pilihan Professional -->
+            <option value="Business">Business</option> <!-- Pilihan Business -->
+          </select> <!-- Menutup dropdown -->
+        </div> <!-- Menutup grup paket -->
+
+        <div class="form-group"> <!-- Grup pesan -->
+          <label for="pesan">Kebutuhan Landing Page</label> <!-- Label pesan -->
+          <textarea id="pesan" placeholder="Ceritakan kebutuhan landing page Anda..." required></textarea> <!-- Textarea pesan -->
+        </div> <!-- Menutup grup pesan -->
+
+        <button type="submit" class="btn btn-primary submit-btn">Kirim Konsultasi via WhatsApp</button> <!-- Tombol submit form -->
+      </form> <!-- Menutup form -->
+    </div> <!-- Menutup container kontak -->
+  </section> <!-- Menutup section kontak -->
+
+  <footer> <!-- Membuka footer -->
+    <div class="container"> <!-- Container footer -->
+      <p>© 2026 BUMIDigital.online Jasa Pembuatan Landing Page Profesional untuk Bisnis Anda.</p> <!-- Teks copyright -->
+    </div> <!-- Menutup container footer -->
+  </footer> <!-- Menutup footer -->
+
+  <a href="https://wa.me/6285885959885?text=Halo%20saya%20ingin%20konsultasi%20pembuatan%20landing%20page" class="whatsapp-float" target="_blank">Chat WhatsApp</a> <!-- Tombol WhatsApp melayang -->
+
+  <script> // Membuka bagian JavaScript
+
+    function toggleMenu() { // Fungsi untuk membuka dan menutup menu mobile
+      const navMenu = document.getElementById("navMenu"); // Mengambil elemen menu berdasarkan id
+      navMenu.classList.toggle("active"); // Menambah atau menghapus class active pada menu
+    } // Menutup fungsi toggleMenu
+
+    function toggleFaq(element) { // Fungsi untuk membuka dan menutup FAQ
+      const faqItem = element.parentElement; // Mengambil elemen induk dari pertanyaan FAQ
+      faqItem.classList.toggle("active"); // Menambah atau menghapus class active pada FAQ
+    } // Menutup fungsi toggleFaq
+
+    function sendToWhatsApp(event) { // Fungsi untuk mengirim data form ke WhatsApp
+      event.preventDefault(); // Mencegah form reload halaman
+
+      const nama = document.getElementById("nama").value; // Mengambil nilai input nama
+      const bisnis = document.getElementById("bisnis").value; // Mengambil nilai input bisnis
+      const paket = document.getElementById("paket").value; // Mengambil nilai pilihan paket
+      const pesan = document.getElementById("pesan").value; // Mengambil nilai pesan
+
+      const nomorWhatsApp = "6281234567890"; // Nomor WhatsApp tujuan, ganti dengan nomor Anda
+
+      const text = `Halo, saya ingin konsultasi pembuatan landing page.%0A%0ANama: ${nama}%0AJenis Bisnis: ${bisnis}%0APaket: ${paket}%0AKebutuhan: ${pesan}`; // Membuat format pesan WhatsApp
+
+      const url = `https://wa.me/${nomorWhatsApp}?text=${text}`; // Membuat URL WhatsApp dengan pesan otomatis
+
+      window.open(url, "_blank"); // Membuka WhatsApp di tab baru
+    } // Menutup fungsi sendToWhatsApp
+
+  </script> <!-- Menutup JavaScript -->
+
+</body> <!-- Menutup body -->
+</html> <!-- Menutup dokumen HTML -->
