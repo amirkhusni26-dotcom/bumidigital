@@ -1,0 +1,293 @@
+/* --- RESET & BASE STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #ffffff; /* Dominan putih */
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- AD SPACES --- */
+.ad-space {
+    background-color: #f5f5f5;
+    border: 1px dashed #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888888;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+
+.ad-top {
+    width: 100%;
+    height: 90px;
+}
+
+.ad-middle {
+    width: 100%;
+    height: 100px;
+    margin: 30px 0;
+}
+
+.ad-sidebar {
+    width: 100%;
+    height: 250px;
+}
+
+/* --- LAYOUT COLS (Flexbox) --- */
+.main-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.content-area {
+    flex: 2;
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 320px;
+}
+
+/* --- KONTEN ARTIKEL --- */
+.article-header {
+    margin-bottom: 25px;
+}
+
+.article-header h1 {
+    font-size: 2rem;
+    color: #111111;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.meta-info {
+    font-size: 0.85rem;
+    color: #777777;
+}
+
+p {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+/* --- PRODUK CARD / AFFILIATE --- */
+.product-card {
+    background-color: #ffffff;
+    border-left: 4px solid #ee4d2d; /* Sedikit aksen merah Shopee */
+    padding: 20px;
+    margin: 30px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 0 8px 8px 0;
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+}
+
+.product-card h2 {
+    font-size: 1.3rem;
+    color: #111111;
+    margin-bottom: 12px;
+}
+
+.product-card ul {
+    margin: 10px 0 20px 20px;
+}
+
+.product-card li {
+    margin-bottom: 5px;
+}
+
+/* Tombol Shopee Merah */
+.btn-shopee {
+    display: inline-block;
+    background-color: #ee4d2d; /* Warna khas merah/oranye shopee */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-shopee:hover {
+    background-color: #d73a1e; /* Merah lebih gelap saat hover */
+    box-shadow: 0 4px 12px rgba(238, 77, 45, 0.3);
+}
+
+.conclusion {
+    background-color: #fff5f5; /* Sentuhan background merah sangat tipis */
+    border: 1px solid #ffcccc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+.conclusion h2 {
+    color: #ee4d2d;
+    margin-bottom: 10px;
+}
+
+/* --- SIDEBAR WIDGET --- */
+.sidebar-widget {
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.sidebar-widget h3 {
+    font-size: 1.1rem;
+    color: #111111;
+    border-bottom: 2px solid #ee4d2d; /* Aksen merah */
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.widget-list {
+    list-style: none;
+}
+
+.widget-list li {
+    margin-bottom: 10px;
+}
+
+.widget-list a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.widget-list a:hover {
+    color: #ee4d2d; /* Link berubah merah saat hover */
+}
+
+/* --- ANIMASI (FADE-IN & SLIDE) --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Penerapan Kelas Animasi */
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease forwards;
+}
+
+.slide-left {
+    animation: slideLeft 0.8s ease cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
+}
+
+/* --- RESPONSIVE (Untuk HP) --- */
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        max-width: 100%;
+    }
+    
+    .btn-shopee {
+        display: block;
+        text-align: center;
+        margin-right: 0;
+    }
+}
+
+.affiliate-box {
+    max-width: 320px;
+    margin: 20px auto;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.affiliate-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s;
+}
+
+.affiliate-img:hover {
+    transform: scale(1.03); /* Gambar sedikit membesar saat disentuh kursor */
+}
+
+.affiliate-info {
+    padding: 15px;
+}
+
+.affiliate-info h3 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #333;
+}
+
+.btn-beli {
+    display: block;
+    background-color: #ee4d2d; /* Warna Merah Shopee */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-beli:hover {
+    background-color: #d73a1e;
+}
